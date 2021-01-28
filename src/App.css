@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+input::placeholder {
+  font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  .video {
+    width: 100%;
+    height: auto;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-aspect-ratio: 16/9) {
+  .video {
+    width: auto;
+    height: 100%;
+  }
+}
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgba(0, 0, 0, 0.253);
   color: white;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+.weather-info {
+  position: absolute;
+  top: 8px;
+  right: 30px;
+  font-size: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 1366px) {
+  .weather-info {
+    font-size: 10px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width: 812px) {
+  .weather-info {
+    left: 10px;
+    top: 10px;
+    font-size: 10px;
   }
+}
+.title {
+  text-align: center;
+  padding-top: 20vh;
+  padding-bottom: 5vh;
+  color: white;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+i {
+  margin-left: 10px;
 }
